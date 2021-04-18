@@ -1,5 +1,7 @@
 bookdown::bs4_book:
   theme:
+      bg: "#101010"
+      fg: "#FDF7F7"
       primary: "#87CEEB"
       base_font:
         google: "Prompt"
