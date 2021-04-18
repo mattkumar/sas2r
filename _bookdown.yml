@@ -1,0 +1,19 @@
+delete_merged_file: true
+new_session: yes
+
+rmd_files: [
+  "index.Rmd",
+
+  "intro_1.Rmd",
+  "intro_2.Rmd",
+
+  "dplyr_eg1.Rmd",
+  "dplyr_eg2.Rmd",
+
+  "ggplot_eg1.Rmd",
+  "ggplot_eg2.Rmd",
+
+  "gt_eg1.Rmd",
+  "gt_eg2.Rmd",
+
+]

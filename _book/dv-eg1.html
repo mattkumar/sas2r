@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>5 ggplot2 Example 1 | SAS2R Catalog</title>
+<meta name="author" content="Matthew Kumar and Clara Beck">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.7/header-attrs.js"></script><script src="libs/jquery-3.5.1/jquery-3.5.1.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/_Prompt-0.3.1.9001/font.css" rel="stylesheet">
+<link href="libs/_JetBrains%20Mono-0.3.1.9001/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.2.4.9003/tabs.js"></script><script src="libs/bs3compat-0.2.4.9003/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">SAS2R Catalog</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li class="book-part">About</li>
+<li><a class="" href="about.html"><span class="header-section-number">1</span> Organization</a></li>
+<li><a class="" href="about2.html"><span class="header-section-number">2</span> Housekeeping</a></li>
+<li class="book-part">Data Wrangling</li>
+<li><a class="" href="dw-eg1.html"><span class="header-section-number">3</span> dplyr Example 1</a></li>
+<li><a class="" href="dw-eg2.html"><span class="header-section-number">4</span> dplyr Example 2</a></li>
+<li class="book-part">Data Visualization</li>
+<li><a class="active" href="dv-eg1.html"><span class="header-section-number">5</span> ggplot2 Example 1</a></li>
+<li><a class="" href="dv-eg2.html"><span class="header-section-number">6</span> ggplot2 Example 2</a></li>
+<li class="book-part">Data Tables</li>
+<li><a class="" href="dt-eg1.html"><span class="header-section-number">7</span> gt Example 1</a></li>
+<li><a class="" href="dt-eg2.html"><span class="header-section-number">8</span> gt Example 2</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/mattkumar/sas2r">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="dv-eg1" class="section level1" number="5">
+<h1>
+<span class="header-section-number">5</span> ggplot2 Example 1<a class="anchor" aria-label="anchor" href="#dv-eg1"><i class="fas fa-link"></i></a>
+</h1>
+<p>Here is an example of a scatter plot where the color of points are mapped to a variable</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
+
+<span class="co"># draw a scatter plot of mpg vs hp, colored by gear</span>
+<span class="va">mtcars</span> <span class="op">%&gt;%</span>
+  <span class="fu">ggplot</span><span class="op">(</span><span class="va">.</span>, <span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">mpg</span>, y<span class="op">=</span><span class="va">hp</span>, color<span class="op">=</span><span class="va">gear</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_point</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<div class="inline-figure"><img src="ggplot_eg1_files/figure-html/unnamed-chunk-1-1.png" width="672"></div>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="dw-eg2.html"><span class="header-section-number">4</span> dplyr Example 2</a></div>
+<div class="next"><a href="dv-eg2.html"><span class="header-section-number">6</span> ggplot2 Example 2</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#dv-eg1"><span class="header-section-number">5</span> ggplot2 Example 1</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/mattkumar/sas2r/blob/master/ggplot_eg1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/mattkumar/sas2r/edit/master/ggplot_eg1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>SAS2R Catalog</strong>" was written by Matthew Kumar and Clara Beck. </p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer>
+</body>
+</html>

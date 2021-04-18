@@ -1,0 +1,14 @@
+# (PART) Data Wrangling {.unnumbered}
+
+# dplyr Example 1 {#dw-eg1}
+
+Here is an example on how to select all columns of a data frame that have a common *suffix* 
+```{r, message = FALSE, warning = FALSE, error = FALSE}
+library(dplyr)
+
+# select columns that end with Width
+my_query <- iris %>%
+  select(ends_with("Width"))
+
+# check
+head(my_query)

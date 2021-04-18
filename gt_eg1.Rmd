@@ -1,0 +1,18 @@
+# (PART) Data Tables {.unnumbered}
+
+# gt Example 1 {#dt-eg1}
+
+Here is an example on how to add a title and subtitle using gt 
+
+```{r, message = FALSE, warning = FALSE, error = FALSE}
+library(tidyverse)
+library(gt)
+
+head(mtcars) %>%
+  gt()  %>%
+  tab_header(
+    title = md("Just a **title**"),
+    subtitle = md("Just a `subtitle`")
+  )
+  
+``` 

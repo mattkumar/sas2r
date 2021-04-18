@@ -1,0 +1,8 @@
+bookdown::bs4_book:
+  theme:
+      primary: "#87CEEB"
+      base_font:
+        google: "Prompt"
+      code_font:
+        google: "JetBrains Mono"
+  repo: https://github.com/mattkumar/sas2r
